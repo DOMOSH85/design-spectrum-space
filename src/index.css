@@ -2,41 +2,60 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Graphics Designer Portfolio Design System - Navy Blue & White Theme */
 
 @layer base {
   :root {
+    /* Navy Blue & White Theme */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
+    --foreground: 220 100% 15%;
+    
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
+    --card-foreground: 220 100% 15%;
+    
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
+    --popover-foreground: 220 100% 15%;
+    
+    /* Navy Blue Primary */
+    --primary: 220 100% 20%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 220 60% 85%;
+    --primary-dark: 220 100% 12%;
+    
+    /* Light Blue Secondary */
+    --secondary: 200 100% 95%;
+    --secondary-foreground: 220 100% 20%;
+    --secondary-accent: 200 100% 85%;
+    
+    --muted: 220 20% 96%;
+    --muted-foreground: 220 20% 45%;
+    
+    --accent: 200 100% 50%;
+    --accent-foreground: 0 0% 100%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 220 20% 90%;
+    --input: 220 20% 96%;
+    --ring: 220 100% 20%;
+    
+    --radius: 0.75rem;
+    
+    /* Custom Design System Colors */
+    --hero-gradient-from: 220 100% 20%;
+    --hero-gradient-to: 200 100% 40%;
+    --surface: 0 0% 99%;
+    --surface-secondary: 220 20% 98%;
+    --text-primary: 220 100% 15%;
+    --text-secondary: 220 40% 35%;
+    --text-muted: 220 20% 60%;
+    
+    /* Shadows */
+    --shadow-sm: 0 2px 4px -1px hsl(220 100% 20% / 0.1);
+    --shadow-md: 0 4px 6px -1px hsl(220 100% 20% / 0.15);
+    --shadow-lg: 0 10px 15px -3px hsl(220 100% 20% / 0.2);
+    --shadow-xl: 0 20px 25px -5px hsl(220 100% 20% / 0.25);
 
     --sidebar-background: 0 0% 98%;
 
@@ -56,33 +75,52 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    /* Dark Theme - Navy Variations */
+    --background: 220 100% 8%;
+    --foreground: 0 0% 95%;
+    
+    --card: 220 80% 10%;
+    --card-foreground: 0 0% 95%;
+    
+    --popover: 220 80% 10%;
+    --popover-foreground: 0 0% 95%;
+    
+    --primary: 200 100% 60%;
+    --primary-foreground: 220 100% 8%;
+    --primary-light: 200 60% 25%;
+    --primary-dark: 200 100% 45%;
+    
+    --secondary: 220 60% 15%;
+    --secondary-foreground: 0 0% 90%;
+    --secondary-accent: 220 60% 20%;
+    
+    --muted: 220 40% 15%;
+    --muted-foreground: 220 20% 65%;
+    
+    --accent: 200 100% 50%;
+    --accent-foreground: 220 100% 8%;
+    
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 220 40% 20%;
+    --input: 220 40% 15%;
+    --ring: 200 100% 60%;
+    
+    /* Dark Theme Custom Colors */
+    --hero-gradient-from: 220 100% 15%;
+    --hero-gradient-to: 200 100% 25%;
+    --surface: 220 100% 9%;
+    --surface-secondary: 220 60% 12%;
+    --text-primary: 0 0% 95%;
+    --text-secondary: 0 0% 80%;
+    --text-muted: 220 20% 50%;
+    
+    /* Dark Shadows */
+    --shadow-sm: 0 2px 4px -1px hsl(0 0% 0% / 0.3);
+    --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.4);
+    --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.5);
+    --shadow-xl: 0 20px 25px -5px hsl(0 0% 0% / 0.6);
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -100,6 +138,60 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground transition-colors duration-300;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--muted));
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--primary));
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--primary-dark));
+  }
+}
+
+@layer components {
+  /* Hero Gradient Background */
+  .hero-gradient {
+    background: linear-gradient(135deg, hsl(var(--hero-gradient-from)), hsl(var(--hero-gradient-to)));
+  }
+  
+  /* Glass Effect */
+  .glass {
+    background: hsl(var(--background) / 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid hsl(var(--border) / 0.2);
+  }
+  
+  /* Hover Animations */
+  .hover-lift {
+    @apply transition-all duration-300 hover:translate-y-[-4px] hover:shadow-lg;
+  }
+  
+  .hover-scale {
+    @apply transition-transform duration-300 hover:scale-105;
+  }
+  
+  /* Text Gradients */
+  .text-gradient {
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }
