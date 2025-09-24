@@ -2,6 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Calendar, Clock, ArrowRight, User } from "lucide-react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const blogPosts = [
   {
@@ -106,14 +107,16 @@ export function Blog() {
                       {post.author}
                     </div>
                     
-                    <Button
-                      variant="ghost"
-                      size="sm"
-                      className="text-primary hover:text-primary hover:bg-primary/10 p-0 h-auto"
-                    >
-                      Read More
-                      <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
-                    </Button>
+                    <Link to={`/blog/${post.id}`}>
+                      <Button
+                        variant="ghost"
+                        size="sm"
+                        className="text-primary hover:text-primary hover:bg-primary/10 p-0 h-auto"
+                      >
+                        Read More
+                        <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                      </Button>
+                    </Link>
                   </div>
                 </CardContent>
               </Card>
@@ -129,14 +132,16 @@ export function Blog() {
           viewport={{ once: true }}
           className="text-center mt-12"
         >
-          <Button
-            variant="outline"
-            size="lg"
-            className="border-primary/20 hover:bg-primary hover:text-primary-foreground hover:border-primary px-8 py-3 rounded-full hover-scale"
-          >
-            View All Posts
-            <ArrowRight className="w-4 h-4 ml-2" />
-          </Button>
+          <Link to="/blog">
+            <Button
+              variant="outline"
+              size="lg"
+              className="border-primary/20 hover:bg-primary hover:text-primary-foreground hover:border-primary px-8 py-3 rounded-full hover-scale"
+            >
+              View All Posts
+              <ArrowRight className="w-4 h-4 ml-2" />
+            </Button>
+          </Link>
         </motion.div>
       </div>
     </section>

@@ -66,7 +66,7 @@ export function Navbar() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 + index * 0.1 }}
                 onClick={() => scrollToSection(item.href)}
-                className="text-foreground hover:text-primary transition-colors duration-200 font-medium"
+                className="text-white hover:text-accent transition-colors duration-200 font-medium"
               >
                 {item.name}
               </motion.button>

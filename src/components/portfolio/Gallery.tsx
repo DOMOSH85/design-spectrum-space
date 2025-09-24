@@ -7,53 +7,66 @@ import { ExternalLink, Eye } from "lucide-react";
 const galleryItems = [
   {
     id: 1,
-    title: "Brand Identity - TechCorp",
+    title: "Luxury Brand Identity - Elevé",
     category: "branding",
-    image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop",
-    description: "Complete brand identity design for a technology startup"
+    image: "https://images.unsplash.com/photo-1634986666676-ec8fd927c23d?w=600&h=400&fit=crop",
+    description: "Complete visual identity for luxury fashion brand including logo, packaging, and brand guidelines"
   },
   {
     id: 2,
-    title: "Mobile App UI - FitTracker",
-    category: "ui-ux",
-    image: "https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?w=600&h=400&fit=crop",
-    description: "Modern mobile app interface design for fitness tracking"
+    title: "Minimalist Logo Collection",
+    category: "branding",
+    image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&h=400&fit=crop",
+    description: "Clean and modern logo designs for various tech startups and creative agencies"
   },
   {
     id: 3,
-    title: "Website Design - Creative Agency",
-    category: "web-design",
-    image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&fit=crop",
-    description: "Responsive website design for a creative agency"
+    title: "Editorial Magazine Layout",
+    category: "print-design",
+    image: "https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=600&h=400&fit=crop",
+    description: "Contemporary magazine layout design with focus on typography and visual hierarchy"
   },
   {
     id: 4,
-    title: "Logo Design - GreenLeaf",
+    title: "Corporate Brand Guidelines",
     category: "branding",
-    image: "https://images.unsplash.com/photo-1542744094-3a31f272c490?w=600&h=400&fit=crop",
-    description: "Eco-friendly brand logo design"
+    image: "https://images.unsplash.com/photo-1542744094-24638eff58bb?w=600&h=400&fit=crop",
+    description: "Comprehensive brand guideline system for financial services company"
   },
   {
     id: 5,
-    title: "E-commerce Platform",
-    category: "ui-ux",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
-    description: "User interface design for online shopping platform"
+    title: "Restaurant Identity Design",
+    category: "branding",
+    image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&h=400&fit=crop",
+    description: "Full brand identity including logo, menu design, and interior graphics for modern bistro"
   },
   {
     id: 6,
-    title: "Product Packaging",
+    title: "Product Label Design",
     category: "packaging",
     image: "https://images.unsplash.com/photo-1586075010923-2dd4570fb338?w=600&h=400&fit=crop",
-    description: "Premium product packaging design"
+    description: "Premium organic skincare product packaging and label design system"
+  },
+  {
+    id: 7,
+    title: "Book Cover Design Series",
+    category: "print-design",
+    image: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600&h=400&fit=crop",
+    description: "Creative book cover designs for contemporary fiction series with unified visual theme"
+  },
+  {
+    id: 8,
+    title: "Concert Poster Collection",
+    category: "print-design",
+    image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&h=400&fit=crop",
+    description: "Bold and dynamic poster designs for electronic music events and festivals"
   }
 ];
 
 const categories = [
   { id: "all", name: "All Work" },
   { id: "branding", name: "Branding" },
-  { id: "ui-ux", name: "UI/UX" },
-  { id: "web-design", name: "Web Design" },
+  { id: "print-design", name: "Print Design" },
   { id: "packaging", name: "Packaging" }
 ];
 
@@ -135,25 +148,7 @@ export function Gallery() {
                 >
                   <div className="text-center text-white p-6">
                     <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-                    <p className="text-white/90 mb-4 text-sm">{item.description}</p>
-                    <div className="flex justify-center gap-3">
-                      <Button
-                        size="sm"
-                        variant="outline"
-                        className="border-white/30 text-white hover:bg-white/10"
-                      >
-                        <Eye className="w-4 h-4 mr-2" />
-                        View
-                      </Button>
-                      <Button
-                        size="sm"
-                        variant="outline"
-                        className="border-white/30 text-white hover:bg-white/10"
-                      >
-                        <ExternalLink className="w-4 h-4 mr-2" />
-                        Visit
-                      </Button>
-                    </div>
+                    <p className="text-white/90 text-sm">{item.description}</p>
                   </div>
                 </motion.div>
 
