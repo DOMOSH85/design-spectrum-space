@@ -3,7 +3,7 @@ import { Hero } from "@/components/portfolio/Hero";
 import { About } from "@/components/portfolio/About";
 import { Services } from "@/components/portfolio/Services";
 import { Gallery } from "@/components/portfolio/Gallery";
-import { Blog } from "@/components/portfolio/Blog";
+// Blog section removed; import intentionally omitted
 import { QuotesSection } from "@/components/portfolio/QuotesSection";
 import { Testimonials } from "@/components/portfolio/Testimonials";
 import { Contact } from "@/components/portfolio/Contact";
@@ -16,10 +16,9 @@ const Index = () => {
       <Hero />
       <About />
       <Services />
-      <Gallery />
-      <QuotesSection />
-      <Blog />
-      <Testimonials />
+  <Gallery />
+  <QuotesSection />
+  <Testimonials />
       <Contact />
       <Footer />
     </div>

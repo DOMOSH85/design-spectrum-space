@@ -3,71 +3,74 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Eye } from "lucide-react";
 
-// Mock gallery data
+// Simplified, designer-focused gallery data
 const galleryItems = [
   {
     id: 1,
-    title: "Luxury Brand Identity - Elevé",
-    category: "branding",
-    image: "https://images.unsplash.com/photo-1634986666676-ec8fd927c23d?w=600&h=400&fit=crop",
-    description: "Complete visual identity for luxury fashion brand including logo, packaging, and brand guidelines"
+    title: "Logo Suite — Clean Marks",
+    category: "logos",
+    image: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=600&h=400&fit=crop",
+    description: "Flexible logo variations and marks for small brands"
   },
   {
     id: 2,
-    title: "Minimalist Logo Collection",
+    title: "Brand Identity — Café Mono",
     category: "branding",
-    image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&h=400&fit=crop",
-    description: "Clean and modern logo designs for various tech startups and creative agencies"
+    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&fit=crop",
+    description: "Logo, color system, and simple usage guidelines"
   },
   {
     id: 3,
-    title: "Editorial Magazine Layout",
-    category: "print-design",
-    image: "https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=600&h=400&fit=crop",
-    description: "Contemporary magazine layout design with focus on typography and visual hierarchy"
+    title: "Poster Series — Event Posters",
+    category: "print",
+    image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=600&h=400&fit=crop",
+    description: "Bold typographic posters for local events"
   },
   {
     id: 4,
-    title: "Corporate Brand Guidelines",
-    category: "branding",
-    image: "https://images.unsplash.com/photo-1542744094-24638eff58bb?w=600&h=400&fit=crop",
-    description: "Comprehensive brand guideline system for financial services company"
+    title: "Social Templates",
+    category: "digital",
+    image: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=600&h=400&fit=crop",
+    description: "Editable social media post templates with clear hierarchy"
   },
   {
     id: 5,
-    title: "Restaurant Identity Design",
-    category: "branding",
-    image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&h=400&fit=crop",
-    description: "Full brand identity including logo, menu design, and interior graphics for modern bistro"
+    title: "Packaging Label",
+    category: "packaging",
+    image: "https://images.unsplash.com/photo-1503602642458-232111445657?w=600&h=400&fit=crop",
+    description: "Simple, print-ready label for a boutique product"
   },
   {
     id: 6,
-    title: "Product Label Design",
-    category: "packaging",
-    image: "https://images.unsplash.com/photo-1586075010923-2dd4570fb338?w=600&h=400&fit=crop",
-    description: "Premium organic skincare product packaging and label design system"
+    title: "Illustration Study",
+    category: "illustration",
+    image: "https://images.unsplash.com/photo-1496318447583-f524534e9ce1?w=600&h=400&fit=crop",
+    description: "Hand-drawn vector illustrations and iconography"
   },
   {
     id: 7,
-    title: "Book Cover Design Series",
-    category: "print-design",
-    image: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600&h=400&fit=crop",
-    description: "Creative book cover designs for contemporary fiction series with unified visual theme"
+    title: "Typography Exploration",
+    category: "branding",
+    image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=600&h=400&fit=crop",
+    description: "Type pairing and layout samples for brand use"
   },
   {
     id: 8,
-    title: "Concert Poster Collection",
-    category: "print-design",
-    image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&h=400&fit=crop",
-    description: "Bold and dynamic poster designs for electronic music events and festivals"
+    title: "Business Card Suite",
+    category: "print",
+    image: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=600&h=400&fit=crop",
+    description: "Simple card systems for consistency across touchpoints"
   }
 ];
 
 const categories = [
   { id: "all", name: "All Work" },
+  { id: "logos", name: "Logos" },
   { id: "branding", name: "Branding" },
-  { id: "print-design", name: "Print Design" },
-  { id: "packaging", name: "Packaging" }
+  { id: "print", name: "Print" },
+  { id: "digital", name: "Digital" },
+  { id: "packaging", name: "Packaging" },
+  { id: "illustration", name: "Illustration" }
 ];
 
 export function Gallery() {

@@ -70,9 +70,9 @@ export function Footer() {
           >
             <h4 className="text-lg font-semibold text-foreground">Get in Touch</h4>
             <div className="space-y-2 text-muted-foreground">
-              <p>hello@designer.com</p>
-              <p>+1 (555) 123-4567</p>
-              <p>San Francisco, CA</p>
+              <p>info.arwagraphics@gmail.com</p>
+              <p>+254 793 278 375</p>
+              <p>Baba Dogo, Laundry</p>
             </div>
           </motion.div>
         </div>
@@ -86,11 +86,11 @@ export function Footer() {
           className="border-t border-border mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4"
         >
           <p className="text-muted-foreground text-sm text-center md:text-left">
-            © {currentYear} DesignStudio. All rights reserved.
+            © {currentYear} Arwa Graphics. All rights reserved.
           </p>
           
           <p className="text-muted-foreground text-sm flex items-center gap-1">
-            Made with <Heart className="w-4 h-4 text-red-500 fill-red-500" /> by DesignStudio
+            @Arwa.Devs
           </p>
         </motion.div>
       </div>

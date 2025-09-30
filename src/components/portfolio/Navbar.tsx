@@ -46,7 +46,7 @@ export function Navbar() {
       }`}
     >
       <div className="container mx-auto px-6">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center h-16">
           {/* Logo */}
           <motion.div
             initial={{ opacity: 0 }}
@@ -54,27 +54,12 @@ export function Navbar() {
             transition={{ delay: 0.2 }}
             className="font-bold text-xl text-gradient"
           >
-            DesignStudio
+            ArwaGraphics
           </motion.div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            {navigation.map((item, index) => (
-              <motion.button
-                key={item.name}
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3 + index * 0.1 }}
-                onClick={() => scrollToSection(item.href)}
-                className="text-white hover:text-accent transition-colors duration-200 font-medium"
-              >
-                {item.name}
-              </motion.button>
-            ))}
-          </div>
-
-          {/* Theme Toggle and Mobile Menu */}
-          <div className="flex items-center space-x-4">
+          {/* Right aligned controls: theme toggle, desktop nav (to the right), and mobile menu */}
+          <div className="flex items-center ml-auto space-x-4">
+            {/* Theme Toggle appears before the links */}
             <Button
               variant="ghost"
               size="icon"
@@ -87,6 +72,22 @@ export function Navbar() {
                 <Moon className="h-4 w-4" />
               )}
             </Button>
+
+            {/* Desktop Navigation (further to the right) */}
+            <div className="hidden md:flex items-center space-x-8">
+              {navigation.map((item, index) => (
+                <motion.button
+                  key={item.name}
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.3 + index * 0.1 }}
+                  onClick={() => scrollToSection(item.href)}
+                  className="text-white hover:text-accent transition-colors duration-200 font-medium"
+                >
+                  {item.name}
+                </motion.button>
+              ))}
+            </div>
 
             {/* Mobile Menu Button */}
             <Button

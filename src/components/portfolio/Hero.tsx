@@ -55,7 +55,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.8 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4"
+            className="flex flex-col sm:flex-row items-center justify-center gap-3"
           >
             <Button
               size="lg"
@@ -65,15 +65,7 @@ export function Hero() {
               Hire Me
               <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
             </Button>
-            
-            <Button
-              variant="outline"
-              size="lg"
-              className="border-white/30 text-white hover:bg-white/10 hover:border-white/50 px-8 py-3 rounded-full hover-scale"
-            >
-              <Download className="mr-2 h-4 w-4" />
-              Download Resume
-            </Button>
+         
           </motion.div>
 
           {/* Scroll Indicator */}

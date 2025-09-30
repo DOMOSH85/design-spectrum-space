@@ -19,24 +19,25 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email",
-    content: "hello@designer.com",
-    link: "mailto:hello@designer.com"
+    content: "info.arwagraphics@gmail.com",
+    link: "mailto:info.arwagraphics@gmail.com"
   },
   {
     icon: Phone,
     title: "Phone",
-    content: "+1 (555) 123-4567",
-    link: "tel:+15551234567"
+    content: "+254 793 278 375",
+    link: "tel:+254793278375"
   },
   {
     icon: MapPin,
     title: "Location",
-    content: "San Francisco, CA",
+    content: "Baba Dogo, Laundry",
     link: "#"
   }
 ];
 
 export function Contact() {
+  const FORM_ENDPOINT = "https://formspree.io/f/xyznzwbg";
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -49,16 +50,48 @@ export function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-
-    // Simulate form submission
-    setTimeout(() => {
-      toast({
-        title: "Message sent!",
-        description: "Thank you for your message. I'll get back to you soon.",
+    try {
+      const res = await fetch(FORM_ENDPOINT, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          _replyto: formData.email,
+        }),
       });
-      setFormData({ name: "", email: "", subject: "", message: "" });
+
+      const data = await res.json().catch(() => ({}));
+
+      if (res.ok) {
+        toast({
+          title: "Message sent!",
+          description: "Thank you for your message. I'll get back to you soon.",
+        });
+        setFormData({ name: "", email: "", subject: "", message: "" });
+      } else {
+        // Formspree returns useful validation info in the JSON body
+        const errorMsg = data?.error || data?.message || "Failed to send message";
+        toast({
+          title: "Error sending message",
+          description: errorMsg,
+          variant: "destructive",
+        });
+      }
+    } catch (err: any) {
+      toast({
+        title: "Network error",
+        description: err?.message || "Could not send message. Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -168,7 +201,7 @@ export function Contact() {
                 <CardTitle className="text-2xl text-foreground">Send a Message</CardTitle>
               </CardHeader>
               <CardContent>
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form onSubmit={handleSubmit} action={FORM_ENDPOINT} method="POST" className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="space-y-2">
                       <Label htmlFor="name">Name *</Label>

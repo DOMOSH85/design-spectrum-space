@@ -11,7 +11,7 @@ const testimonials = [
     position: "CEO, TechStart Inc.",
     content: "Working with this designer was an absolute pleasure. They transformed our brand identity completely and delivered beyond our expectations. The attention to detail and creative vision is outstanding.",
     rating: 5,
-    avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b5aa?w=100&h=100&fit=crop&crop=face"
+    avatar: ""
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ const testimonials = [
     position: "Marketing Director, GrowthLab",
     content: "The UI/UX design for our mobile app was phenomenal. User engagement increased by 150% after the redesign. Professional, creative, and always delivered on time.",
     rating: 5,
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face"
+    avatar: ""
   },
   {
     id: 3,
@@ -27,7 +27,7 @@ const testimonials = [
     position: "Founder, EcoBloom",
     content: "The branding package was exactly what we needed to stand out in the market. The logo design perfectly captures our eco-friendly values and the entire brand identity is cohesive and beautiful.",
     rating: 5,
-    avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face"
+    avatar: ""
   },
   {
     id: 4,
@@ -35,7 +35,7 @@ const testimonials = [
     position: "Product Manager, InnovateCorp",
     content: "Exceptional work on our website redesign. The new design is not only visually stunning but also significantly improved our conversion rates. Highly recommended!",
     rating: 5,
-    avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face"
+    avatar: ""
   }
 ];
 
