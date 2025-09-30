@@ -31,7 +31,7 @@ export function Footer() {
             viewport={{ once: true }}
             className="space-y-4"
           >
-            <h3 className="text-2xl font-bold text-gradient">DesignStudio</h3>
+            <h3 className="text-2xl font-bold text-gradient">ArwaGraphics</h3>
             <p className="text-muted-foreground leading-relaxed">
               Creating exceptional digital experiences through innovative design and creative storytelling.
             </p>
