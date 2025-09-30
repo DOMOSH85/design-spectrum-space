@@ -29,9 +29,18 @@ export function Navbar() {
 
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+    if (!element) return;
+
+    // Close the mobile menu first so layout can update, then scroll.
+    // On desktop we keep immediate scroll; on mobile (when menu is open) delay a bit to avoid the menu collapse interrupting the scroll.
+    const doScroll = () => element.scrollIntoView({ behavior: "smooth" });
+
+    if (isOpen) {
       setIsOpen(false);
+      // Allow the exit animation/layout change to complete before scrolling
+      setTimeout(doScroll, 300);
+    } else {
+      doScroll();
     }
   };
 
