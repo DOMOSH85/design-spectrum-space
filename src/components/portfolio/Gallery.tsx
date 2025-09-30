@@ -3,62 +3,72 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Eye } from "lucide-react";
 
+// Import images from the repository `uploads` folder so Vite bundles them into dist
+import logoImg from "../../../uploads/Logo.webp";
+import brandImg from "../../../uploads/Brand Identity.png";
+import posterImg from "../../../uploads/poster.webp";
+import socialImg from "../../../uploads/social.jpg";
+import packagingImg from "../../../uploads/Packaging labe.jpeg";
+import illustrationImg from "../../../uploads/illustration.jpg";
+import typographyImg from "../../../uploads/typography.jpg";
+import cardsImg from "../../../uploads/cards.jpg";
+
 // Simplified, designer-focused gallery data
 const galleryItems = [
   {
     id: 1,
     title: "Logo Suite — Clean Marks",
     category: "logos",
-    image: "/uploads/Logo.webp",
+    image: logoImg,
     description: "Flexible logo variations and marks for small brands"
   },
   {
     id: 2,
     title: "Brand Identity — Café Mono",
     category: "branding",
-    image: "/uploads/Brand Identity.png",
+    image: brandImg,
     description: "Logo, color system, and simple usage guidelines"
   },
   {
     id: 3,
     title: "Poster Series — Event Posters",
     category: "print",
-    image: "/uploads/poster.webp",
+    image: posterImg,
     description: "Bold typographic posters for local events"
   },
   {
     id: 4,
     title: "Social Templates",
     category: "digital",
-    image: "/uploads/social.jpg",
+    image: socialImg,
     description: "Editable social media post templates with clear hierarchy"
   },
   {
     id: 5,
     title: "Packaging Label",
     category: "packaging",
-    image: "/uploads/Packaging labe.jpeg",
+    image: packagingImg,
     description: "Simple, print-ready label for a boutique product"
   },
   {
     id: 6,
     title: "Illustration Study",
     category: "illustration",
-    image: "/uploads/illustration.jpg",
+    image: illustrationImg,
     description: "Hand-drawn vector illustrations and iconography"
   },
   {
     id: 7,
     title: "Typography Exploration",
     category: "branding",
-    image: "/uploads/typography.jpg",
+    image: typographyImg,
     description: "Type pairing and layout samples for brand use"
   },
   {
     id: 8,
     title: "Business Card Suite",
     category: "print",
-    image: "/uploads/cards.jpg",
+    image: cardsImg,
     description: "Simple card systems for consistency across touchpoints"
   }
 ];
