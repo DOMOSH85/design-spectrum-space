@@ -8,11 +8,12 @@ import { Mail, Phone, MapPin, Send, Instagram, Linkedin, Github, Dribbble } from
 import { motion } from "framer-motion";
 import { useToast } from "@/hooks/use-toast";
 
+// NOTE: Replace these placeholder usernames with your real account names if different.
 const socialLinks = [
-  { icon: Instagram, href: "#", label: "Instagram", color: "hover:text-pink-500" },
-  { icon: Dribbble, href: "#", label: "Dribbble", color: "hover:text-pink-400" },
-  { icon: Linkedin, href: "#", label: "LinkedIn", color: "hover:text-blue-500" },
-  { icon: Github, href: "#", label: "GitHub", color: "hover:text-gray-600" },
+  { icon: Instagram, href: "https://instagram.com/ArwaGraphics", label: "Instagram", color: "hover:text-pink-500" },
+  { icon: Dribbble, href: "https://dribbble.com/ArwaGraphics", label: "Dribbble", color: "hover:text-pink-400" },
+  { icon: Linkedin, href: "https://www.linkedin.com/in/ArwaGraphics", label: "LinkedIn", color: "hover:text-blue-500" },
+  { icon: Github, href: "https://github.com/ArwaGraphics", label: "GitHub", color: "hover:text-gray-600" },
 ];
 
 const contactInfo = [
@@ -175,6 +176,9 @@ export function Contact() {
                   <motion.a
                     key={social.label}
                     href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title={social.label}
                     initial={{ opacity: 0, scale: 0.8 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ delay: index * 0.1, duration: 0.4 }}

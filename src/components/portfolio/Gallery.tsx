@@ -9,56 +9,56 @@ const galleryItems = [
     id: 1,
     title: "Logo Suite — Clean Marks",
     category: "logos",
-    image: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=600&h=400&fit=crop",
+    image: "/uploads/Logo.webp",
     description: "Flexible logo variations and marks for small brands"
   },
   {
     id: 2,
     title: "Brand Identity — Café Mono",
     category: "branding",
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&fit=crop",
+    image: "/uploads/Brand Identity.png",
     description: "Logo, color system, and simple usage guidelines"
   },
   {
     id: 3,
     title: "Poster Series — Event Posters",
     category: "print",
-    image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=600&h=400&fit=crop",
+    image: "/uploads/poster.webp",
     description: "Bold typographic posters for local events"
   },
   {
     id: 4,
     title: "Social Templates",
     category: "digital",
-    image: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=600&h=400&fit=crop",
+    image: "/uploads/social.jpg",
     description: "Editable social media post templates with clear hierarchy"
   },
   {
     id: 5,
     title: "Packaging Label",
     category: "packaging",
-    image: "https://images.unsplash.com/photo-1503602642458-232111445657?w=600&h=400&fit=crop",
+    image: "/uploads/Packaging labe.jpeg",
     description: "Simple, print-ready label for a boutique product"
   },
   {
     id: 6,
     title: "Illustration Study",
     category: "illustration",
-    image: "https://images.unsplash.com/photo-1496318447583-f524534e9ce1?w=600&h=400&fit=crop",
+    image: "/uploads/illustration.jpg",
     description: "Hand-drawn vector illustrations and iconography"
   },
   {
     id: 7,
     title: "Typography Exploration",
     category: "branding",
-    image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=600&h=400&fit=crop",
+    image: "/uploads/typography.jpg",
     description: "Type pairing and layout samples for brand use"
   },
   {
     id: 8,
     title: "Business Card Suite",
     category: "print",
-    image: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=600&h=400&fit=crop",
+    image: "/uploads/cards.jpg",
     description: "Simple card systems for consistency across touchpoints"
   }
 ];

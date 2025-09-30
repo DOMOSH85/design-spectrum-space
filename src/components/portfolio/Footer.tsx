@@ -1,4 +1,4 @@
-import { Heart } from "lucide-react";
+import { Heart, Instagram, Linkedin, Github, Dribbble } from "lucide-react";
 import { motion } from "framer-motion";
 
 const quickLinks = [
@@ -88,10 +88,50 @@ export function Footer() {
           <p className="text-muted-foreground text-sm text-center md:text-left">
             © {currentYear} Arwa Graphics. All rights reserved.
           </p>
-          
-          <p className="text-muted-foreground text-sm flex items-center gap-1">
-            @Arwa.Devs
-          </p>
+          <div className="flex items-center gap-4">
+            <div className="flex items-center gap-2">
+              <a
+                href="https://instagram.com/ArwaGraphics"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="text-muted-foreground hover:text-pink-500"
+              >
+                <Instagram className="w-5 h-5" />
+              </a>
+              <a
+                href="https://dribbble.com/ArwaGraphics"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Dribbble"
+                className="text-muted-foreground hover:text-pink-400"
+              >
+                <Dribbble className="w-5 h-5" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/ArwaGraphics"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="text-muted-foreground hover:text-blue-500"
+              >
+                <Linkedin className="w-5 h-5" />
+              </a>
+              <a
+                href="https://github.com/ArwaGraphics"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+                className="text-muted-foreground hover:text-gray-600"
+              >
+                <Github className="w-5 h-5" />
+              </a>
+            </div>
+
+            <p className="text-muted-foreground text-sm flex items-center gap-1">
+              @Arwa.Devs
+            </p>
+          </div>
         </motion.div>
       </div>
     </footer>
